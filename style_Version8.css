@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+
+body {
+  font-family: 'Cairo', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  direction: rtl;
+  color: #222;
+  min-height: 100vh;
+}
+
+/* هيدر احترافي */
+header.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #222 60%, #f7b731 100%);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: 
+    linear-gradient(120deg, #222c 70%, #f7b73199 100%),
+    url('images/gym-bg.jpg') center/cover no-repeat;
+  z-index: 0;
+  filter: brightness(0.7) blur(0.5px);
+}
+
+.glass {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.11);
+  box-shadow: 0 6px 32px #0003;
+  border-radius: 24px;
+  padding: 3em 2em 2em 2em;
+  text-align: center;
+  backdrop-filter: blur(10px) saturate(130%);
+  border: 1px solid #fff3;
+  max-width: 400px;
+  margin: 2em auto;
+  animation: fadein 1.2s;
+}
+@keyframes fadein {
+  from {opacity: 0; transform: translateY(-40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+.gym-logo {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  background: #fff7;
+  border: 4px solid #f7b731;
+  box-shadow: 0 0 24px #f7b73150;
+  transition: box-shadow 0.2s;
+}
+.gym-logo:hover {
+  box-shadow: 0 0 40px #f7b731cc;
+}
+.hero-content h1 {
+  font-size: 2.7rem;
+  margin-bottom: .5em;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-shadow: 0 2px 16px #2226;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.4em;
+}
+
+.brand-main {
+  color: #f7b731;
+  text-shadow: 0 0 18px #f7b73144;
+}
+.brand-accent {
+  color: #fff;
+  background: linear-gradient(90deg, #f7b731 30%, #ff7f50 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  padding: 0 6px;
+}
+.hero-content .subtitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 2em;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+.hero-content .subtitle span {
+  color: #f7b731;
+  font-weight: 900;
+  font-size: 1.5em;
+  margin: 0 0.3em;
+}
+.cta-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  margin-top: 0.7em;
+  background: linear-gradient(90deg, #f7b731 60%, #ff7f50 100%);
+  color: #222;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 2px 18px #f7b73188;
+  transition: background .2s, transform .15s, color .2s;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.cta-btn:hover {
+  background: linear-gradient(90deg, #ff7f50 60%, #f7b731 100%);
+  color: #fff;
+  transform: scale(1.04) translateY(-2px);
+  box-shadow: 0 4px 32px #ff7f5088;
+}
+
+/* شريط التنقل */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  background: #222;
+  padding: 13px 0;
+  gap: 2em;
+  box-shadow: 0 2px 10px #0002;
+}
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.09rem;
+  padding: 6px 18px;
+  transition: background .2s, color .2s;
+  border-radius: 7px;
+  font-weight: 700;
+}
+.main-nav a:hover {
+  background: #f7b731;
+  color: #222;
+}
+
+.section {
+  max-width: 950px;
+  margin: 2.7em auto;
+  padding: 2em 1.5em;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px #f7b73120;
+}
+.section h2 {
+  color: #f7b731;
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: 900;
+  text-shadow: 1px 2px 10px #f7b73130;
+}
+
+.plans table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.1em;
+  font-size: 1.1rem;
+}
+.plans th, .plans td {
+  padding: 13px;
+  border-bottom: 1px solid #ececec;
+  text-align: center;
+}
+.plans th {
+  background: #f7b731;
+  color: #fff;
+  font-size: 1.14rem;
+  letter-spacing: 1px;
+}
+.offers {
+  color: #fff;
+  background: linear-gradient(90deg, #f7b731 80%, #ff7f50 100%);
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 0.5em;
+  box-shadow: 0 2px 8px #f7b73120;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.1em;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 13px;
+  box-shadow: 0 0 12px #0001;
+  object-fit: cover;
+  height: 170px;
+  border: 2px solid #f7b73130;
+  background: #f7b73110;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 8px 36px #f7b73133;
+}
+
+.contact .social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+  margin-top: 0.7em;
+  justify-content: center;
+}
+.social a, .social span {
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.13rem;
+}
+
+.social .whatsapp {
+  background: #25D366;
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 6px;
+  font-size: 1.09rem;
+  transition: background .2s;
+  box-shadow: 0 2px 8px #25d36644;
+  display: inline-block;
+}
+.social .whatsapp:hover {
+  background: #128C7E;
+}
+
+.social .facebook-btn {
+  background: #1877f3;
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 6px;
+  font-size: 1.09rem;
+  transition: background .2s;
+  box-shadow: 0 2px 8px #1877f355;
+  display: inline-block;
+}
+.social .facebook-btn:hover {
+  background: #1453a1;
+}
+
+.social .instagram-btn {
+  background: linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 6px;
+  font-size: 1.09rem;
+  transition: background .2s;
+  box-shadow: 0 2px 8px #ee2a7b33;
+  display: inline-block;
+}
+.social .instagram-btn:hover {
+  background: linear-gradient(45deg,#6228d7,#ee2a7b,#f9ce34);
+}
+
+.phone-text {
+  font-weight: bold;
+  color: #222;
+  font-size: 1.13rem;
+  direction: ltr;
+  letter-spacing: 1px;
+  background: #f7b73122;
+  padding: 6px 16px 6px 7px;
+  border-radius: 6px;
+  margin-right: 4px;
+}
+
+.about p {
+  font-size: 1.15rem;
+  line-height: 2.2;
+  color: #444;
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  background: #222;
+  color: #fff;
+  padding: 1.2em 0;
+  margin-top: 3em;
+  border-radius: 0 0 16px 16px;
+  font-size: 1.02rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .section { max-width: 99vw; }
+}
+@media (max-width: 700px) {
+  .glass { padding: 2em 0.5em 1.2em 0.5em; max-width: 98vw; }
+  .hero-content h1 { font-size: 1.5rem; }
+  .gym-logo { width: 70px; height: 70px; }
+  .main-nav { flex-direction: column; gap: 0.4em; padding: 7px 0; }
+  .gallery-grid img { height: 110px; }
+}
