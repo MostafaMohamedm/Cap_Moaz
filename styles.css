@@ -256,18 +256,13 @@ header.hero {
   background: #1453a1;
 }
 
-.social .instagram-btn {
-  background: linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
-  color: #fff;
-  padding: 7px 18px;
-  border-radius: 6px;
+.social-note {
   font-size: 1.09rem;
-  transition: background .2s;
-  box-shadow: 0 2px 8px #ee2a7b33;
-  display: inline-block;
-}
-.social .instagram-btn:hover {
-  background: linear-gradient(45deg,#6228d7,#ee2a7b,#f9ce34);
+  color: #888;
+  background: #eee;
+  padding: 6px 13px;
+  border-radius: 7px;
+  font-weight: 700;
 }
 
 .phone-text {
